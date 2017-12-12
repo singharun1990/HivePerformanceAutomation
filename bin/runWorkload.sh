@@ -8,6 +8,8 @@ else
     WORKLOAD_NAME=$1
 fi
 
+QUERY_NAME=tpch_query1.sql
+
 set -a
 export WORKLOAD=${WORKLOAD_NAME}
 export RUN_ID=${STARTTIME}
@@ -23,7 +25,7 @@ then
     ${WORKLOAD_HOME}/prerun.sh >> ${RUN_LOG_FILE}
 fi
 
-./runQueries.sh ${WORKLOAD_NAME}
+./runSingleQueryLoop.sh ${WORKLOAD_NAME} ${QUERY_NAME} 
 
 
 
