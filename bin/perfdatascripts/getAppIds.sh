@@ -5,7 +5,7 @@ then
 	echo "Usage ./GetAppIds.sh RESULTS_DIR PERFDATA_OUTPUTDIR TIMELINE_SERVER"
 	echo "Default Values will be used if you do not provide command line parameters"
 fi
-
+echo "*************in getAppIds"
 if [ ! -z $1 ]
 then
         RESULTS_DIR=$1

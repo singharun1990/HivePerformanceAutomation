@@ -1,6 +1,6 @@
 #!/bin/bash
 #usage: ./getPATSummary.sh PAT_OUTOPUT_FOLDER RESULT_FOLDER
-
+echo "*************in getPATsUMMARY"
 find $1 -name netstat -type f -exec grep -H 'eth0' {}  \; | sed  -r "s#.*tpch_query_([0-9]+)[^:]*:#query\1 #g" > temp;
 find $1 -name netstat -type f -exec head -1 {}  \; | uniq | sed 's/%//g' | sed 's:/::g' | sed '1s/^/query /' > header ;
 cat header temp > $2/allnet.tsv

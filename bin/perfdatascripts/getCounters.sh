@@ -1,6 +1,6 @@
 fields="TOTAL_LAUNCHED_TASKS,RACK_LOCAL_TASKS,DATA_LOCAL_TASKS,NUM_SUCCEEDED_TASKS,NUM_KILLED_TASKS,NUM_FAILED_TASKS,WASB_BYTES_READ,FILE_BYTES_READ,HDFS_BYTES_WRITTEN,WASB_BYTES_WRITTEN,FILE_BYTES_WRITTEN,HDFS_BYTES_WRITTEN"
 echo "QUERY,$fields" >$2;
-
+echo "*************in getCounters"
 function getcountervalues {
         for i in ${fields//,/ }; do
             s+=','

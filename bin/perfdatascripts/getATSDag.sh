@@ -5,7 +5,7 @@ then
 	echo "Usage ./GetATSDAG.sh PERFDATA_OUTPUTDIR"
 	echo "Default Values will be used if you do not provide command line parameters"
 fi
-
+echo "*************in getATSDag"
 if [ ! -z $1 ]
 then
 	PERFDATA_OUTPUTDIR=$1
