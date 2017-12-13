@@ -21,7 +21,7 @@ then
 fi
 
 set -x
-
+echo "******* IN GetTezDags"
 echo "RESULTS_DIR is set to $RESULTS_DIR"
 echo "PERFDATA_OUTPUTDIR is set to $PERFDATA_OUTPUTDIR"
 echo "TIMELINE_SERVER is set to $TIMELINE_SERVER"
