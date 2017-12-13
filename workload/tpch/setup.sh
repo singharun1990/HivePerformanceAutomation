@@ -1,8 +1,8 @@
 #!/bin/bash
-
+installpath=/home/sshuser/hive-testbench/workload/tpch
 set -x
 
-. ./config.sh
+. $installpath/config.sh
 #check java
 for f in gcc javac; do
 	which $f > /dev/null 2>&1
