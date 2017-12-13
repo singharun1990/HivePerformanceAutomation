@@ -34,6 +34,8 @@ while read -r line
 do
         echo "Getting dag for $line"
         read -a linearray <<< $line
+	echo "linearray[0] = $linearray[0]"
+	echo "linearray[1] = $linearray[1]"	
         curl  $TIMELINE_SERVER/TEZ_DAG_ID?primaryFilter=applicationId:${linearray[0]} > $PERFDATA_OUTPUTDIR/dags/dag_${linearray[1]}.txt
 done < $file
 
