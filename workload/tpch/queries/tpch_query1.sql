@@ -1,4 +1,5 @@
  select
 	*
 from
-	customer;
+	customer 
+	LIMIT 2;
