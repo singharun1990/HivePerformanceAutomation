@@ -37,6 +37,8 @@ fi
 
 if [ ! -d "${OUTPUT_PATH}/azlogs" ]; then
 	git clone https://github.com/dharmeshkakadia/azlogs ${OUTPUT_PATH}/azlogs ;
+	echo "${OUTPUT_PATH}"
+	echo "${CURRENT_DIR}"
     {CURRENT_DIR}/apache-maven-3.0.5/bin/mvn package assembly:single -f ${OUTPUT_PATH}/azlogs/pom.xml;
 fi
 
